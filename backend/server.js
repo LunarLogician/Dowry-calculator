@@ -5,7 +5,24 @@ import { calculateDowry } from "./routes/calculate.js";
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors({ origin: ["http://localhost:5173", "http://127.0.0.1:5173"] }));
+// Allow the production frontend URL (set FRONTEND_URL on Railway) +
+// localhost for local development.
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://127.0.0.1:5173",
+  "https://dowry-calculator-two.vercel.app",
+  ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : []),
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (e.g. curl / Postman)
+      if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
+      callback(new Error(`CORS: origin ${origin} not allowed`));
+    },
+  })
+);
 app.use(express.json());
 
 // ── Health check ──────────────────────────────────────────────────────────

@@ -198,7 +198,8 @@ export default function DowryCalculator() {
     setStep(5);
     setApiError("");
     try {
-      const res = await fetch("/api/calculate", {
+      const base = import.meta.env.VITE_API_URL ?? "";
+      const res = await fetch(`${base}/api/calculate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(inputs),
