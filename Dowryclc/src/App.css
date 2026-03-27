@@ -666,62 +666,6 @@ input[type="range"] {
   padding: 8px 12px;
 }
 
-/* ── Services Promo ───────────────────────────– */
-.services-promo {
-  margin-top: 48px;
-}
-
-.promo-card {
-  background: linear-gradient(135deg, #1a0f0a 0%, #2d1810 100%);
-  border: 2px solid #daa520;
-  border-radius: 12px;
-  padding: 32px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.promo-card:hover {
-  box-shadow: 0 12px 32px rgba(218, 165, 32, 0.25);
-  transform: translateY(-4px);
-}
-
-.promo-icon {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-}
-
-.promo-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  color: #daa520;
-  margin-bottom: 10px;
-}
-
-.promo-desc {
-  color: #b8984e;
-  font-size: 0.95rem;
-  margin-bottom: 20px;
-}
-
-.promo-btn {
-  display: inline-block;
-  padding: 12px 32px;
-  background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
-  color: #1a0f0a;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 16px rgba(218, 165, 32, 0.25);
-}
-
-.promo-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 12px 24px rgba(218, 165, 32, 0.35);
-}
-
 /* ── Services Section ─────────────────────────── */
 .services-section {
   margin-top: 60px;

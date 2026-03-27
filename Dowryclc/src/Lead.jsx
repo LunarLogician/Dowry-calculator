@@ -6,7 +6,7 @@ export default function Lead() {
     <div className="lead-container">
       {/* ── Services Section ── */}
       <section className="services-section">
-        <h2 className="services-title">✨ Premium Services</h2>
+        <h2 className="services-title">✨ Marketing cause why not</h2>
         <p className="services-subtitle">Custom Development & Consultation</p>
         
         <div className="services-grid">

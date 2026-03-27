@@ -274,16 +274,6 @@ export default function DowryCalculator() {
                 </a>
               </div>
             </div>
-
-            {/* ── Freelance Services Link ── */}
-            <div className="services-promo">
-              <div className="promo-card">
-                <div className="promo-icon">💼</div>
-                <h3 className="promo-title">Looking for Custom Development?</h3>
-                <p className="promo-desc">I offer premium MERN Stack & AI SaaS services</p>
-                <a href="/lead" className="promo-btn">View Services →</a>
-              </div>
-            </div>
           </div>
         </div>
       )}
