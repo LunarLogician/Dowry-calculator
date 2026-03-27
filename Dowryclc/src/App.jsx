@@ -275,63 +275,13 @@ export default function DowryCalculator() {
               </div>
             </div>
 
-            {/* ── Services Section ── */}
-            <div className="services-section">
-              <h2 className="services-title">🚀 Need a Custom App?</h2>
-              <p className="services-subtitle">I build MERN Stack & AI SaaS applications</p>
-              
-              <div className="services-grid">
-                <a href="https://www.fiverr.com/s/99pBP8E" target="_blank" rel="noopener noreferrer" className="service-card">
-                  <div className="service-icon">🤖</div>
-                  <h3 className="service-title">Custom MERN Stack AI SaaS</h3>
-                  <p className="service-desc">Build intelligent applications with React, Node.js, MongoDB & AI integration</p>
-                  <div className="service-features">
-                    <span>⚡ Full Stack Development</span>
-                    <span>🧠 AI Integration</span>
-                    <span>⚙️ Custom Features</span>
-                  </div>
-                  <div className="service-platform">Fiverr</div>
-                </a>
-                
-                <a href="https://www.fiverr.com/s/rE40NAj" target="_blank" rel="noopener noreferrer" className="service-card">
-                  <div className="service-icon">🌐</div>
-                  <h3 className="service-title">React & Node.js Web Apps</h3>
-                  <p className="service-desc">Fast, scalable web applications using MERN Stack & FastAPI</p>
-                  <div className="service-features">
-                    <span>⚡ Fast Development</span>
-                    <span>📦 MERN Stack</span>
-                    <span>🔧 FastAPI Ready</span>
-                  </div>
-                  <div className="service-platform">Fiverr</div>
-                </a>
-
-                <a href="https://www.upwork.com/freelancers/~015ec88d39d0d74aa0" target="_blank" rel="noopener noreferrer" className="service-card">
-                  <div className="service-icon">💼</div>
-                  <h3 className="service-title">Full Stack Development</h3>
-                  <p className="service-desc">Experienced MERN stack developer available for projects on Upwork</p>
-                  <div className="service-features">
-                    <span>🔥 Verified Freelancer</span>
-                    <span>✅ Top Rated</span>
-                    <span>📊 Portfolio</span>
-                  </div>
-                  <div className="service-platform">Upwork</div>
-                </a>
-              </div>
-
-              <div className="connect-section">
-                <p className="connect-title">Let's Work Together!</p>
-                <p className="connect-text">Choose your preferred platform to get in touch</p>
-                <div className="contact-links">
-                  <a href="https://www.fiverr.com/s/99pBP8E" target="_blank" rel="noopener noreferrer" className="contact-btn contact-fiverr">
-                    📲 Fiverr
-                  </a>
-                  <a href="https://www.upwork.com/freelancers/~015ec88d39d0d74aa0" target="_blank" rel="noopener noreferrer" className="contact-btn contact-upwork">
-                    💼 Upwork
-                  </a>
-                  <a href="https://www.linkedin.com/in/muhammad-zubair-2130b2244/?skipRedirect=true" target="_blank" rel="noopener noreferrer" className="contact-btn contact-linkedin">
-                    🔗 LinkedIn
-                  </a>
-                </div>
+            {/* ── Freelance Services Link ── */}
+            <div className="services-promo">
+              <div className="promo-card">
+                <div className="promo-icon">💼</div>
+                <h3 className="promo-title">Looking for Custom Development?</h3>
+                <p className="promo-desc">I offer premium MERN Stack & AI SaaS services</p>
+                <a href="/lead" className="promo-btn">View Services →</a>
               </div>
             </div>
           </div>
