@@ -198,7 +198,7 @@ export default function DowryCalculator() {
     setStep(5);
     setApiError("");
     try {
-      const base = import.meta.env.VITE_API_URL ?? "";
+      const base = "https://backend-dowry.vercel.app";
       const res = await fetch(`${base}/api/calculate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
