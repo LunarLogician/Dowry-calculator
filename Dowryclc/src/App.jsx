@@ -161,7 +161,7 @@ const DEFAULT_INPUTS = {
 };
 
 export default function DowryCalculator() {
-  const [step, setStep] = useState(0);   // 0=intro 1-4=form 5=loading 6=result
+  const [step, setStep] = useState(-1);   // -1=landing 0=intro 1-4=form 5=loading 6=result
   const [inputs, setInputs] = useState(DEFAULT_INPUTS);
   const [result, setResult] = useState(null);
   const [apiError, setApiError] = useState("");
@@ -216,7 +216,7 @@ export default function DowryCalculator() {
   };
 
   const reset = () => {
-    setStep(0); setResult(null);
+    setStep(-1); setResult(null);
     setInputs(DEFAULT_INPUTS); setValidErr(""); setApiError(""); setCopied(false);
   };
 
@@ -237,7 +237,48 @@ export default function DowryCalculator() {
 
   return (
     <div className="page">
-      <div className="card" ref={cardRef}>
+      {/* ── LANDING PAGE ── */}
+      {step === -1 && (
+        <div className="landing-container">
+          <h1 className="landing-title">Desi Calculators</h1>
+          <p className="landing-subtitle">Choose your calculator</p>
+          <div className="cards-grid">
+            <div className="card">
+              <div className="card-content">
+                <div className="card-icon">💰</div>
+                <h2 className="card-title">Dowry Calculator</h2>
+                <p className="card-description">Calculate the satire-based dowry estimate based on multiple factors.</p>
+                <div className="card-features">
+                  <span className="card-feature">📊 Multi-factor analysis</span>
+                  <span className="card-feature">📋 Detailed breakdown</span>
+                  <span className="card-feature">🏆 Tier verdict</span>
+                </div>
+                <button className="btn btn-primary" onClick={() => setStep(0)} style={{ marginTop: "16px" }}>
+                  Calculate Dowry →
+                </button>
+              </div>
+            </div>
+            
+            <div className="card">
+              <div className="card-content">
+                <div className="card-icon">💍</div>
+                <h2 className="card-title">Haq Meher Calculator</h2>
+                <p className="card-description">Calculate the Islamic Haq Meher with our specialized calculator.</p>
+                <div className="card-features">
+                  <span className="card-feature">🕌 Islamic principles</span>
+                  <span className="card-feature">💎 Accurate calculations</span>
+                  <span className="card-feature">📖 Comprehensive guide</span>
+                </div>
+                <a href="https://haq-mehr-calculator-hlij.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ marginTop: "16px" }}>
+                  Calculate Haq Meher →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="card" ref={cardRef} style={{ display: step !== -1 ? "block" : "none" }}>
 
         {/* ── INTRO ── */}
         {step === 0 && (
@@ -256,9 +297,12 @@ export default function DowryCalculator() {
               <div className="feat-item">📋 Detailed breakdown</div>
               <div className="feat-item">🏆 Tier verdict</div>
             </div>
-            <button className="btn btn-primary" onClick={() => setStep(1)}>
-              Begin Assessment →
-            </button>
+            <div className="nav-row">
+              <button className="btn btn-ghost" onClick={() => setStep(-1)}>← Back to Calculators</button>
+              <button className="btn btn-primary" onClick={() => setStep(1)}>
+                Begin Assessment →
+              </button>
+            </div>
             <AdUnit slot="1234567890" format="horizontal" />
           </div>
         )}
