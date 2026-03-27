@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./App.css";
+import AdUnit from "./AdUnit";
 
 // ─────────────────────────────────────────────
 // Helpers
@@ -258,6 +259,7 @@ export default function DowryCalculator() {
             <button className="btn btn-primary" onClick={() => setStep(1)}>
               Begin Assessment →
             </button>
+            <AdUnit slot="1234567890" format="horizontal" />
           </div>
         )}
 
@@ -299,6 +301,7 @@ export default function DowryCalculator() {
 
             {step === 2 && (
               <div>
+                <AdUnit slot="1234567891" format="horizontal" />
                 <h2 className="step-heading">Appearance & Personality</h2>
                 <Field label={`Looks Rating — ${inputs.looks}/10`} hint="Be honest. The algorithm knows.">
                   <div className="slider-row">
@@ -472,6 +475,8 @@ export default function DowryCalculator() {
             </div>
 
             <hr className="divider" />
+
+            <AdUnit slot="1234567892" format="horizontal" />
 
             <p className="section-label">Detailed Breakdown</p>
             <div className="base-row">
